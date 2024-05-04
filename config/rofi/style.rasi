@@ -1,0 +1,117 @@
+configuration {
+    font: "JetBrainsMono 12";
+    show-icons: true;
+    hide-scrollbar: true;
+    sidebar-mode: true;
+    window-format: "[{w}] ··· {c} ···   {t}";
+    click-to-exit: true;
+    display-run: " ";
+    display-drun: " ";
+}
+
+* {
+    background-color: #000000;
+    fg: #ffffff;
+}
+
+window {
+    border-radius: 1.3em;
+    padding: 1.5em;
+    width: 35%;
+}
+
+prompt {
+    color: @fg;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: " ";
+    margin: 0px 4px 0px 0px;
+}
+
+entry {
+    spacing: 0;
+    color: @fg;
+}
+
+case-indicator {
+    spacing: 0;
+    color: @fg;
+}
+
+inputbar {
+    spacing: 0px;
+    text-color: @fg;
+    padding: 1px;
+    children: [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+mainbox {
+    border-radius: 4px;
+    padding: 6;
+}
+
+listview {
+    fixed-height: 0;
+    border-radius: 0.6em;
+    spacing: 0;
+    scrollbar: false;
+    padding: 0.3em;
+}
+
+element {
+    border-radius: 0.6em;
+    padding: 5px;
+}
+
+element normal {
+    color: @fg;
+}
+
+element selected {
+    background-color: @fg;
+    color: #000000;
+}
+
+element alternate {
+    color: @fg;
+}
+
+element-icon selected {
+    background-color: #202020;
+}
+
+element-icon {
+    padding: 0.4em;
+    border-radius: 100%;
+    background-color: #202020;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    color: inherit;
+}
+
+button {
+    margin: 0;
+    padding: 0.4em;
+    color: @fg;
+    border: 0px;
+    border-radius: 1em;
+}
+
+button selected {
+    background-color: @fg;
+    color: #000000;
+}
+
+message {
+    padding: 1px;
+}
+
+textbox {
+    color: @fg;
+}
+
+/* vim:ft=css

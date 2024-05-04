@@ -1,0 +1,7 @@
+configuration {
+    show: "drun";
+    modi: "run,drun";
+    run-command: "sh -c '{cmd}'";
+}
+
+@theme "style.rasi"

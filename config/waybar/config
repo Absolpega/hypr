@@ -1,0 +1,72 @@
+{
+    "layer": "top",
+
+    "position": "right",
+
+    "output": ["HDMI-A-4"],
+
+    "modules-left": ["custom/swaync", "hyprland/workspaces"],
+    "modules-center": [],
+    "modules-right": ["cava", "tray", "battery", "clock"],
+
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "warp-on-scroll": false,
+        "format": "{id}",
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+        }
+    },
+
+    "tray": {
+        "icon-size": 28,
+        "spacing": 10
+    },
+
+    "battery": {
+        "format": "{capacity}\n<big>{icon}</big>",
+        "format-charging": "{capacity}\n<big>{icon}</big>󱐋",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "clock": {
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "format": "{:%I%n%M%n%p}"
+    },
+
+    "cava": {
+        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ]
+    },
+
+    "custom/swaync": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "󰂚",
+            "dnd-notification": "󰂛",
+            "dnd-none": "󰂛",
+            "inhibited-notification": "󱅫",
+            "inhibited-none": "󰂚",
+            "dnd-inhibited-notification": "󰂛",
+            "dnd-inhibited-none": "󰂛"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+}
+
