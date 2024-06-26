@@ -29,7 +29,7 @@ menuitem:hover {
 #cava {
 }
 
-#cava,
+#language,
 #custom-swaync,
 #workspaces,
 #tray,
@@ -70,6 +70,10 @@ menuitem:hover {
   color: #000000;
 }
 
+#workspaces button.visible.empty {
+  color: #000000;
+}
+
 #workspaces button.empty {
   color: #404040;
 }
@@ -82,9 +86,13 @@ menuitem:hover {
   padding: 1rem 0.15rem;
 }
 
+#language {
+  padding: 1rem 0.15rem;
+}
+
 #clock {
   font-weight: bold;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 
 #custom-swaync {
